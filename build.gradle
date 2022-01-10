@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.6.0'
+    id 'org.jetbrains.kotlin.kapt' version '1.6.0'
 }
 
 group 'com.boycoder'
@@ -12,6 +13,9 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "org.jetbrains.kotlin:kotlin-reflect"
+    implementation "org.openjdk.jmh:jmh-core:1.33"
+    kapt "org.openjdk.jmh:jmh-generator-annprocess:1.33"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'

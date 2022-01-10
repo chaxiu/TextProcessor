@@ -1,0 +1,113 @@
+# JMH version: 1.33
+# VM version: JDK 1.8.0_251, Java HotSpot(TM) 64-Bit Server VM, 25.251-b08
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52366:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint (default, use -Djmh.blackhole.autoDetect=true to auto-detect)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.boycoder.processor.InlineBenchmark.testInlined
+
+# Run progress: 0.00% complete, ETA 00:05:20
+# Fork: 1 of 2
+# Warmup Iteration   1: 3289269.116 ops/ms
+# Warmup Iteration   2: 3326417.936 ops/ms
+# Warmup Iteration   3: 3331524.229 ops/ms
+Iteration   1: 3332347.627 ops/ms
+Iteration   2: 3338832.542 ops/ms
+Iteration   3: 3332769.805 ops/ms
+Iteration   4: 3335081.309 ops/ms
+Iteration   5: 3332043.497 ops/ms
+Iteration   6: 3330019.099 ops/ms
+Iteration   7: 3272539.879 ops/ms
+Iteration   8: 3331920.387 ops/ms
+Iteration   9: 3329005.029 ops/ms
+Iteration  10: 3331767.185 ops/ms
+
+# Run progress: 25.00% complete, ETA 00:04:02
+# Fork: 2 of 2
+# Warmup Iteration   1: 3337442.960 ops/ms
+# Warmup Iteration   2: 3336683.385 ops/ms
+# Warmup Iteration   3: 3278053.495 ops/ms
+Iteration   1: 3295564.681 ops/ms
+Iteration   2: 3275379.889 ops/ms
+Iteration   3: 3265569.661 ops/ms
+Iteration   4: 3244392.759 ops/ms
+Iteration   5: 3215493.866 ops/ms
+Iteration   6: 3035881.433 ops/ms
+Iteration   7: 3273852.143 ops/ms
+Iteration   8: 3205484.503 ops/ms
+Iteration   9: 3170611.056 ops/ms
+Iteration  10: 3192692.970 ops/ms
+
+
+Result "com.boycoder.processor.InlineBenchmark.testInlined":
+  3272062.466 ±(99.9%) 67403.033 ops/ms [Average]
+  (min, avg, max) = (3035881.433, 3272062.466, 3338832.542), stdev = 77621.433
+  CI (99.9%): [3204659.433, 3339465.499] (assumes normal distribution)
+
+
+# JMH version: 1.33
+# VM version: JDK 1.8.0_251, Java HotSpot(TM) 64-Bit Server VM, 25.251-b08
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home/jre/bin/java
+# VM options: -javaagent:/Applications/IntelliJ IDEA CE.app/Contents/lib/idea_rt.jar=52366:/Applications/IntelliJ IDEA CE.app/Contents/bin -Dfile.encoding=UTF-8
+# Blackhole mode: full + dont-inline hint (default, use -Djmh.blackhole.autoDetect=true to auto-detect)
+# Warmup: 3 iterations, 10 s each
+# Measurement: 10 iterations, 5 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: com.boycoder.processor.InlineBenchmark.testNonInlined
+
+# Run progress: 50.00% complete, ETA 00:02:41
+# Fork: 1 of 2
+# Warmup Iteration   1: 318950.220 ops/ms
+# Warmup Iteration   2: 340845.942 ops/ms
+# Warmup Iteration   3: 356130.509 ops/ms
+Iteration   1: 356195.162 ops/ms
+Iteration   2: 347408.970 ops/ms
+Iteration   3: 337964.769 ops/ms
+Iteration   4: 342187.796 ops/ms
+Iteration   5: 354481.745 ops/ms
+Iteration   6: 331522.578 ops/ms
+Iteration   7: 323793.593 ops/ms
+Iteration   8: 352030.591 ops/ms
+Iteration   9: 354946.701 ops/ms
+Iteration  10: 341066.713 ops/ms
+
+# Run progress: 75.00% complete, ETA 00:01:20
+# Fork: 2 of 2
+# Warmup Iteration   1: 323352.304 ops/ms
+# Warmup Iteration   2: 337739.946 ops/ms
+# Warmup Iteration   3: 364258.831 ops/ms
+Iteration   1: 365220.446 ops/ms
+Iteration   2: 362308.343 ops/ms
+Iteration   3: 367630.010 ops/ms
+Iteration   4: 366381.197 ops/ms
+Iteration   5: 366239.596 ops/ms
+Iteration   6: 371707.226 ops/ms
+Iteration   7: 350470.713 ops/ms
+Iteration   8: 371204.777 ops/ms
+Iteration   9: 373105.545 ops/ms
+Iteration  10: 373152.437 ops/ms
+
+
+Result "com.boycoder.processor.InlineBenchmark.testNonInlined":
+  355450.945 ±(99.9%) 12647.220 ops/ms [Average]
+  (min, avg, max) = (323793.593, 355450.945, 373152.437), stdev = 14564.557
+  CI (99.9%): [342803.725, 368098.165] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:05:23
+
+REMEMBER: The numbers below are just data. To gain reusable insights, you need to follow up on
+why the numbers are the way they are. Use profilers (see -prof, -lprof), design factorial
+experiments, perform baseline and negative tests that provide experimental control, make sure
+the benchmarking environment is safe on JVM/OS/HW level, ask for reviews from the domain experts.
+Do not assume the numbers tell you what you want them to tell.
+
+Benchmark                        Mode  Cnt        Score       Error   Units
+InlineBenchmark.testInlined     thrpt   20  3272062.466 ± 67403.033  ops/ms
+InlineBenchmark.testNonInlined  thrpt   20   355450.945 ± 12647.220  ops/ms
